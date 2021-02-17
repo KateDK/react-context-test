@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-// import ThemeContext from './themeContext';
+import ThemeContext from './themeContext';
 
 class Button extends Component {
   render() {
-    return <button className="light-theme">Switch Theme</button>;
+    console.log(this.context);
+    return <button className={`${this.context}-theme`}>Switch Theme</button>;
   }
 }
-
+Button.contextType = ThemeContext;
 export default Button;
