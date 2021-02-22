@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ThemeContext from './themeContext';
+import { ThemeContextProvider } from './themeContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContext.Provider value={'dark'}>
+    <ThemeContextProvider>
       <App />
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
