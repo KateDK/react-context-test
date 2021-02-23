@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = (props) => {
-  return <button className={`${props.theme}-theme`}>Switch Theme</button>;
+  return (
+    <button className={`${props.theme}-theme`} onClick={props.onClick}>
+      Switch Theme
+    </button>
+  );
 };
 
 Button.propTypes = {
@@ -10,7 +14,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  theme: 'dark',
+  theme: 'light',
 };
 
 export default Button;

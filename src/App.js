@@ -8,7 +8,9 @@ function App() {
     <div>
       <Header />
       <ThemeContextConsumer>
-        {(theme) => <Button theme={theme} />}
+        {(context) => (
+          <Button theme={context.theme} onClick={context.toggleTheme} />
+        )}
       </ThemeContextConsumer>
       <Button theme="light" />
       <Button />

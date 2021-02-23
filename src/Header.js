@@ -5,9 +5,9 @@ class Header extends Component {
   render() {
     return (
       <ThemeContextConsumer>
-        {(theme) => (
-          <header className={`${theme}-theme`}>
-            <h2>{theme} Theme</h2>
+        {(context) => (
+          <header className={`${context.theme}-theme`}>
+            <h2>{context.theme} Theme</h2>
           </header>
         )}
       </ThemeContextConsumer>
