@@ -15,6 +15,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   theme: 'light',
+  onClick: () => console.log('Click'),
 };
 
 export default Button;
